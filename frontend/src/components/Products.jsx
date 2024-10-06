@@ -27,7 +27,9 @@ const Products = () => {
     const getProducts = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:4000/api/products");
+        const response = await axios.get(
+          "https://ecom-2mt1.onrender.com/api/products"
+        );
         
         if (componentMounted) {
           setData(response.data.products); // Assuming the products are inside a "products" key in the response

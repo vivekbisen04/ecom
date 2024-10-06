@@ -42,7 +42,7 @@ const Register = () => {
 
       // Send POST request to /api/auth/register
       const { data } = await axios.post(
-        "http://localhost:4000/api/auth/register",
+        "https://ecom-2mt1.onrender.com/api/auth/register",
         { name, email, password },
         config
       );
