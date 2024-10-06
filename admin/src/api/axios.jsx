@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 const instance = axios.create({
-  baseURL: "https://ecom-2mt1.onrender.com",
+  baseURL: "https://ecom-2mt1.onrender.com/api",
 });
 
 // Add a request interceptor
