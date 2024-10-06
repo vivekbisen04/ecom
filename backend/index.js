@@ -16,28 +16,7 @@ const cartRoutes = require("./routes/cartRoutes");
 const checkoutRoutes = require("./routes/checkoutRoutes");
 const orderRoutes =require("./routes/orderRoutes");
 
-const allowedOrigins = [
-  "http://localhost:3000",
-  "http://localhost:5173",
-  "https://ecom-2mt1.onrender.com",
-];
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      // Allow requests with no origin (like mobile apps, curl, etc.)
-      if (!origin) return callback(null, true);
-
-      // Check if the origin is in the allowedOrigins array
-      if (allowedOrigins.indexOf(origin) !== -1) {
-        return callback(null, true);
-      } else {
-        // If the origin is not allowed, send an error
-        return callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true, // If you need credentials like cookies to be included in the requests
-  })
-);
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
