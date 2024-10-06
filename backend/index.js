@@ -16,7 +16,11 @@ const cartRoutes = require("./routes/cartRoutes");
 const checkoutRoutes = require("./routes/checkoutRoutes");
 const orderRoutes =require("./routes/orderRoutes");
 
-const allowedOrigins = ["http://localhost:3000", "http://localhost:5173"];
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://localhost:5173",
+  "https://ecom-2mt1.onrender.com",
+];
 app.use(
   cors({
     origin: function (origin, callback) {
